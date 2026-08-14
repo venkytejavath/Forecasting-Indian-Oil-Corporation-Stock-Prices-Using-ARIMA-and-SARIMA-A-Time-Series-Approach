@@ -251,7 +251,7 @@ The search considers:
 ``` text
 p = range(0,3)
 d = [0, 1]
-q = (0,3)
+q = range(0,3)
 ```
 
 Each candidate model forecasts the validation observations one step at a
@@ -395,9 +395,7 @@ The final test-set comparison is:
 
 The models perform very similarly.
 
-ARIMA achieves the lowest test RMSE by a very small margin, while SARIMA
-was selected as the final model because it achieved the lowest
-**validation** RMSE.
+ARIMA achieves the lowest test RMSE by a very small margin. More importantly, ARIMA was selected as the final model because it achieved the lower validation RMSE (1.5089 vs. 1.5157).
 
 This distinction is important:
 
@@ -590,8 +588,7 @@ section.
     variance.
 8.  The residual Q-Q plot indicates departures from normality,
     particularly in the tails.
-9.  The selected SARIMA model is used to produce a 30-step future
-    forecast with 95% confidence intervals.
+9.  The selected ARIMA(1,1,1) model is used to produce a 30-step future forecast with 95% confidence intervals.
 10. The results suggest that daily IOC closing prices have limited
     predictable linear structure using the ARIMA-family models
     considered.
