@@ -345,14 +345,14 @@ forecasts are skipped.
 The model selected by validation RMSE is:
 
 ``` text
-SARIMA(1,1,1)(0,0,0,5)
+SARIMA(1,1,1)(1,0,0,5)
 ```
 
 Validation performance reported in the notebook:
 
 ``` text
-MAE  ≈ 1.1441
-RMSE ≈ 1.5078
+MAE  ≈ 1.1405
+RMSE ≈ 1.5157
 ```
 
 The SARIMA model therefore has a slightly lower validation RMSE than
@@ -390,7 +390,7 @@ The final test-set comparison is:
   Model                         MAE         RMSE
   ------------------------ -------- ------------
   ARIMA(1,1,1)               1.4752   **2.0399**
-  SARIMA(1,1,1)(0,0,0,5)     1.4753       2.0404
+  SARIMA(1,1,1)(1,0,1,5)     1.4763       2.0439
   Naïve Random Walk          1.4874       2.0474
 
 ### Interpretation
@@ -627,7 +627,7 @@ This project has several limitations:
 -   The SARIMA seasonal period of 5 is an exploratory representation of
     a trading week; it does not establish strong weekly seasonality.
 -   The selected SARIMA model has no seasonal AR, differencing, or MA
-    terms: `(0,0,0,5)`.
+    terms: `(1,0,1,5)`.
 -   Residual diagnostics indicate heteroskedasticity, but a GARCH model
     is not included.
 -   The models do not incorporate external variables such as crude-oil
