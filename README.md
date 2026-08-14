@@ -388,7 +388,7 @@ The final test-set comparison is:
   Model                         MAE         RMSE
   ------------------------ -------- ------------
   ARIMA(1,1,1)               1.4752   **2.0399**
-  SARIMA(1,1,1)(1,0,1,5)     1.4763       2.0439
+  SARIMA(1,1,1)(1,0,1,5)     1.4763       2.0440
   Naïve Random Walk          1.4874       2.0474
 
 ### Interpretation
