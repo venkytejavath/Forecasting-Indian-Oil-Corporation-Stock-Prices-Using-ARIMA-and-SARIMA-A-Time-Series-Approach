@@ -368,13 +368,13 @@ The final decision is based only on validation RMSE:
 
 ``` text
 ARIMA validation RMSE  ≈ 1.5089
-SARIMA validation RMSE ≈ 1.5078
+SARIMA validation RMSE ≈ 1.5157
 ```
 
 Therefore, the notebook selects:
 
 ``` text
-SARIMA(1,1,1)(1,0,1,5)
+ARIMA(1,1,1)
 ```
 
 as the final model for future forecasting.
