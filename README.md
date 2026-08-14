@@ -374,7 +374,7 @@ SARIMA validation RMSE ≈ 1.5078
 Therefore, the notebook selects:
 
 ``` text
-SARIMA(1,1,1)(0,0,0,5)
+SARIMA(1,1,1)(1,0,1,5)
 ```
 
 as the final model for future forecasting.
