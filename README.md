@@ -249,7 +249,7 @@ Candidate ARIMA models are evaluated using walk-forward validation.
 The search considers:
 
 ``` text
-p = range(0,0)
+p = range(0,3)
 d = [0, 1]
 q = (0,3)
 ```
@@ -355,9 +355,7 @@ MAE  ≈ 1.1405
 RMSE ≈ 1.5157
 ```
 
-The SARIMA model therefore has a slightly lower validation RMSE than
-ARIMA.
-
+The SARIMA model performs slightly worse than ARIMA on validation RMSE, although it remains very close in performance.
 ------------------------------------------------------------------------
 
 ## 🏆 Final Model Selection
@@ -583,8 +581,7 @@ section.
 2.  First-order differencing produces a stationary series according to
     the ADF test.
 3.  ARIMA(1,1,1) is the best ARIMA model according to validation RMSE.
-4.  SARIMA(1,1,1)(1,0,1,5) achieves a slightly lower validation RMSE
-    than ARIMA.
+4.  SARIMA(1,1,1)(1,0,1,5) has a slightly higher validation RMSE than ARIMA.
 5.  ARIMA and SARIMA provide only marginal improvements over the naïve
     random-walk benchmark.
 6.  Residual diagnostics indicate remaining dependence at some longer
@@ -610,8 +607,7 @@ This project has several limitations:
     dedicated return/volatility forecasting framework.
 -   The SARIMA seasonal period of 5 is an exploratory representation of
     a trading week; it does not establish strong weekly seasonality.
--   The selected SARIMA model has no seasonal AR, differencing, or MA
-    terms: `(1,0,1,5)`.
+-   The best SARIMA model includes seasonal AR and MA terms with seasonal period 5, but SARIMA is not selected as the final model because its validation RMSE is higher     than that of ARIMA.
 -   Residual diagnostics indicate heteroskedasticity, but a GARCH model
     is not included.
 -   The models do not incorporate external variables such as crude-oil
