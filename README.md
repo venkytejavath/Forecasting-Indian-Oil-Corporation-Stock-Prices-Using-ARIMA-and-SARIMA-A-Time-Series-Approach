@@ -599,7 +599,7 @@ section.
 2.  First-order differencing produces a stationary series according to
     the ADF test.
 3.  ARIMA(1,1,1) is the best ARIMA model according to validation RMSE.
-4.  SARIMA(1,1,1)(0,0,0,5) achieves a slightly lower validation RMSE
+4.  SARIMA(1,1,1)(1,0,1,5) achieves a slightly lower validation RMSE
     than ARIMA.
 5.  ARIMA and SARIMA provide only marginal improvements over the naïve
     random-walk benchmark.
