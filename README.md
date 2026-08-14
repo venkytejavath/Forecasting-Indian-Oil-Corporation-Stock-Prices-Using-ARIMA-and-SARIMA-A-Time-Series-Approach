@@ -249,9 +249,9 @@ Candidate ARIMA models are evaluated using walk-forward validation.
 The search considers:
 
 ``` text
-p = 0, 1, 2
-d = 0, 1
-q = 0, 1, 2
+p = range(0,0)
+d = [0, 1]
+q = (0,3)
 ```
 
 Each candidate model forecasts the validation observations one step at a
