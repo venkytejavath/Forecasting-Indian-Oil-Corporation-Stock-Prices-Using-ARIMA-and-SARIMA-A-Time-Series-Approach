@@ -273,7 +273,7 @@ ARIMA(1,1,1)
 Validation performance:
 
 ``` text
-MAE  ≈ 1.5089
+MAE  ≈ 1.1455
 RMSE ≈ 1.5089
 ```
 
