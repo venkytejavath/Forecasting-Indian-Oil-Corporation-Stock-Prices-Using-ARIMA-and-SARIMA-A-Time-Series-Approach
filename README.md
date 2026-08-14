@@ -345,7 +345,7 @@ forecasts are skipped.
 The model selected by validation RMSE is:
 
 ``` text
-SARIMA(1,1,1)(1,0,0,5)
+SARIMA(1,1,1)(1,0,1,5)
 ```
 
 Validation performance reported in the notebook:
